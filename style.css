@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background: #03254c;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 900;
+    font-style: italic;
+    cursor: pointer;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.front-card {
+    position: absolute;
+    height: 450px;
+    width: 330px;
+    border: 2px solid black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('pics/front-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    transition: 2s;
+    transform-origin: left;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.front-card h1 {
+    margin: 35px 0 0 0;
+    color: black;
+}
+.front-card.move {
+    transform: rotateY(-160deg);
+}
+.back-card {
+    cursor: pointer;
+    position: relative;
+    height: 450px;
+    width: 330px;
+    border: 2px solid black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('pics/back-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    gap: 35px;
+    color: black;
+    border-radius: 10px 0 0 10px;
+}
+.back-card h1 {
+    font-size: 1.7rem;
+    margin-top: -30px;
+}
+.back-card .message {
+    width: 100%;
+    padding: 0 12px;
+    text-align: justify;
+}
+.back-card .author {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+@media (min-width: 300px) {
+    .front-card {
+        height: 400px;
+        width: 350px;
+    }
+    .front-card h1 {
+        font-size: 1.7rem;
+    }
+    .back-card {
+        height: 400px;
+        width: 350px;
+    }
+    .back-card h1 {
+        font-size: 1.5rem;
+    }
+    .back-card .message p {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .front-card {
+        height: 500px;
+        width: 400px;
+    }
+    .front-card h1 {
+        font-size: 2rem;
+    }
+    .back-card {
+        height: 500px;
+        width: 400px;
+    }
+    .back-card h1 {
+        font-size: 1.7rem;
+    }
+    .back-card .message p { 
+        font-size: 1.2rem;
+    }
+    
+}
